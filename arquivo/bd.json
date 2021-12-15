@@ -1,0 +1,16 @@
+[
+  {
+    "nome":"AROS-07",
+    "cpf":12345789,
+    "end":
+    {
+      "rua":"aQueEuMoro",
+      "bairro":"ondeEstaMinhaRua",
+      "cidade":"ondeTemMaisGente"
+    }
+  },
+{"Nome":"Giuseppe Kadhura","CPF":125456987,"Enderecos":{"rua":"nem","bairro":"aPau","cidade":"Juvenal"},"NomeCompleto":"Giuseppe Kadhura Sobrenome"},
+{"Nome":"Giuseppe Kallongha","CPF":125456987,"Enderecos":{"rua":"nem","bairro":"aPau","cidade":"Juvenal"},"NomeCompleto":"Giuseppe Kallongha Sobrenome"}
+,
+{"Nome":"Giuseppe Kallongha","CPF":125456987,"Enderecos":{"rua":"nem","bairro":"aPau","cidade":"Juvenal"},"NomeCompleto":"Giuseppe Kallongha Sobrenome"}
+]
