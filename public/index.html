@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AROS-07 (API)</title>
+</head>
+<body>
+  <div>
+  <form action='/add' method='post'>
+  <label for='nome'>Nome:</label>
+  <input type='text' name='nome' />
+    <label for='sobreNome'>Sobrenome:</label>
+  <input type='text' name='sobreNome' />
+  <label for='cpf'>CPF:</label>
+  <input type='number' name='cpf' />
+  <fieldset name='endereco'>
+  <label for='rua'>Rua:</label>
+  <input type='text' name='rua' />
+  <label for='bairro'>Bairro:</label>
+  <input type='text' name='bairro' />
+  <label for='cidade'>Cidade:</label>
+  <input type='text' name='cidade' />
+  </fieldset>
+  <button type='submit'>ENVIAR</button>
+  </form>
+  </div>
+
+  <form action='/getAll' method='get'>
+    <input type="submit" value="save">
+  </form>
+  
+</body>
+</html>
