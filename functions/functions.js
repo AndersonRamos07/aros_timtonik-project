@@ -2,8 +2,8 @@ const modelo = require('../models/Modelo');
 const funcFiles = require('./fileFunctions');
 const getFunc = require('./getFunction');
 
-//const cArquivo = './arquivo/_arosBD.json';
-const cArquivo = './arquivo/arosBD.json';
+const cArquivo = './arquivo/_arosBD.json';
+//const cArquivo = './arquivo/arosBD.json';
 
 const construir = (pNome, pSobreNome, pCPF, pEnderecos) => {
   var modeloNovo = new modelo(pNome, pSobreNome, pCPF, pEnderecos);

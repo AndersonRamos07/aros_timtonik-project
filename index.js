@@ -18,49 +18,22 @@ app.get('/', (req, res) => {
 // http: GET - TODOS
 app.get('/getAll', (req, res)=>{
   var jsonL = Function.saveContent();
-  console.log(typeof(jsonL) + '<jsonL + typeOfwJSNconvert>');
-  var jsonInArray = JSON.parse(jsonL);
-  //var retornoSemUm = jsonInArray.pop();
-  //var encontrarNoArray = jsonInArray.find(elem =>{elem === 1});
-  console.log(typeof(encontrarNoArray) + '<encontrarNoArray>');
-  res.status(200).send(jsonInArray);
+  res.status(200).send(JSON.parse(jsonL));
 });
 
 //  http: POST - POR NOME
 app.post('/searchByName', (req, res)=>{
-  console.log(req.param.nomeSearch + '<nomeSearch>')
   var jsonL = Function.saveContent();
   var jsonInArray = JSON.parse(jsonL);
-  var retorno = jsonInArray.find(elem => elem.nome == req.body.nomeSearch)
-  res.send(retorno);
+  res.send(jsonInArray.find(elem => elem.nome == req.body.nomeSearch));
 })
 
 // http: POST - ADICIONAR
 app.post('/add', (req, res) => {
-  var endereco = {"rua":req.body.rua,"bairro":req.body.bairro,"cidade":req.body.cidade}
-  var retorno = Function.construir(req.body.nome, req.body.sobreNome, req.body.cpf, endereco);
+  var retorno = Function.construir(req.body.nome, req.body.sobreNome, req.body.cpf, {"rua":req.body.rua,"bairro":req.body.bairro,"cidade":req.body.cidade});
   res.json(retorno);
 });
-
-app.get('/getJson', (req, res)=>{
-  var jsonL = Function.getContentConvert();
-  console.log(jsonL + typeof(jsonL) + '<typeof(jsonL)> + getJson');
-  res.send(jsonL);
-})
 
 app.listen(PORT, () => {
   console.log(`rodando na porta http://localhost:${PORT}`)
 });
-
-/*
-app.post('/foi', (req, res)=>{
-  var endereco = {
-    "rua":req.body.rua,
-    "bairro":req.body.bairro,
-    "cidade":req.body.cidade
-  }
-  var retorno = Function.construir(req.body.nome, req.body.sobreNome, req.body.cpf, endereco);
-  var inclusao = Function.pushContent(retorno);
-  res.json(inclusao);
-});
-*/
