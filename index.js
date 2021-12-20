@@ -18,8 +18,12 @@ app.get('/', (req, res) => {
 // http: GET - TODOS
 app.get('/getAll', (req, res)=>{
   var jsonL = Function.saveContent();
-  console.log(jsonL + typeof(jsonL) + '<jsonL + typeOfjsonL>')
-  res.status(200).send(/*JSON.parse(jsonL)*/jsonL);
+  console.log(typeof(jsonL) + '<jsonL + typeOfwJSNconvert>');
+  var jsonInArray = JSON.parse(jsonL);
+  //var retornoSemUm = jsonInArray.pop();
+  //var encontrarNoArray = jsonInArray.find(elem =>{elem === 1});
+  console.log(typeof(encontrarNoArray) + '<encontrarNoArray>');
+  res.status(200).send(/*JSON.parse()jsonInArray*/jsonInArray[1].id);
 });
 
 // http: POST - ADICIONAR
