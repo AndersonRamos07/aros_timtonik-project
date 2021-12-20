@@ -1,7 +1,7 @@
-class ModeloJS {
+class Modelo {
   static contador = 0;
   constructor(pNome, pSobreNome, pCPF, pEnderecos){
-    this.id = ModeloJS.contador;
+    this.id = Modelo.contador;
     this.nome = pNome;
     this.sobreNome = pSobreNome;
     this.cpf = pCPF;
@@ -13,18 +13,9 @@ class ModeloJS {
   showThis (){
     return `foi adicionado o ${this.nome} ao sistema!`
   }
-  set addContador(plus){
-    ModeloJS.contador = ModeloJS.contador + plus;
+  set addContador(lastID){
+    Modelo.contador = lastID + 1;
   }
 }
 
-module.exports = ModeloJS
-
-/*contar(plus){
-  this.id = this.contador + plus;
-}
-*/
-/*  implementaContador(){
-    return this.id++
-  }
-  */
+module.exports = Modelo

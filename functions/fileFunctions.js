@@ -1,5 +1,4 @@
 const fs = require('fs');
-const fsDir = require('fs.promises');
 const os = require('os');
 
 //  CONFERE O ARQUIVO E RETORNA FALSE/TRUE
@@ -22,6 +21,11 @@ const pegarConteudo = (pArquivo)=>{
   return retorno;
 };
 
+const convertArray = (pArquivo) =>{
+  var coor = pegarConteudo(pArquivo);
+  return JSON.parse(coor);
+}
+
 //  INSERE O CONTEUDO NO ARQUIVO
 const aditarArquivo = (pConteudo, pArquivo)=>{
   return fs.writeFile(pArquivo, pConteudo, (err)=>{
@@ -29,4 +33,4 @@ const aditarArquivo = (pConteudo, pArquivo)=>{
     console.log('Arquivo gravado!')})
 };
 
-module.exports = {verificarArquivo, verificarConteudo, aditarArquivo, pegarConteudo}
+module.exports = {convertArray, verificarArquivo, verificarConteudo, aditarArquivo, pegarConteudo}

@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const PORT = 7000;
 
-const Modelo = require('./models/ModeloJS');//import
+const Modelo = require('./models/Modelo');//import
 const Function = require('./functions/functions');//import
 
 // http: GET - HOME
@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
 // http: GET - TODOS
 app.get('/getAll', (req, res)=>{
   var jsonL = Function.saveContent();
-  res.status(200).send(JSON.parse(jsonL));
+  console.log(jsonL + typeof(jsonL) + '<jsonL + typeOfjsonL>')
+  res.status(200).send(/*JSON.parse(jsonL)*/jsonL);
 });
 
 // http: POST - ADICIONAR
@@ -28,21 +29,22 @@ app.post('/add', (req, res) => {
   res.json(retorno);
 });
 
+app.get('/getJson', (req, res)=>{
+  var jsonL = Function.getContentConvert();
+  console.log(jsonL + typeof(jsonL) + '<typeof(jsonL)> + getJson');
+  res.send(jsonL);
+})
+
 app.listen(PORT, () => {
   console.log(`rodando na porta http://localhost:${PORT}`)
 });
 
-/*
-app.get('/todos', (req, res)=>{
-  var jsonL = Function.transForm();
-  res.json(jsonL);
-})
 
 app.get('/all', (req, res)=>{
   var jsonL = Function.getContent();
   res.send(jsonL);
 })
-*/
+
 
 /*
 app.post('/foi', (req, res)=>{
