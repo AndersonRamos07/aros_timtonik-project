@@ -6,8 +6,10 @@
   <title>AROS-07 (API)</title>
 </head>
 <body>
-  <div>
+  <div class='rest'>
   <form action='/add' method='post'>
+  <fieldset>
+  <legend>Inserir um novo (POST)</legend>
   <label for='nome'>Nome:</label>
   <input type='text' name='nome' />
     <label for='sobreNome'>Sobrenome:</label>
@@ -23,20 +25,38 @@
   <input type='text' name='cidade' />
   </fieldset>
   <button type='submit'>ENVIAR</button>
+  </fieldset>
+  </form>
+  </div>
+  
+  <div class='rest'>
+  <form action='/searchByName' method='post'>
+  <fieldset>
+    <legend>Pesquisar por Nome (GET)</legend>
+    <label for='nomeSearch'>Nome:</label>
+    <input type='text' name='nomeSearch'/>
+    <button type="submit">PESQUISAR</button>
+  </fieldset>
   </form>
   </div>
 
+  <div class='rest'>
   <form action='/getAll' method='get'>
-    <input type="submit" value="TODOS">
+    <fieldset><legend>TODOS (GET)</legend>
+      <input type="submit" value="TODOS">
+    </fieldset>
   </form>
+  </div>
 
-  <form action='/getJson' method='get'>
-    <input type="submit" value="getJson">
-  </form>
+<!--
+    <form action='/all' method='get'>
+      <input type="submit" value="All">
+    </form>
 
-  <form action='/all' method='get'>
-    <input type="submit" value="All">
-  </form>
+    <form action='/getJson' method='get'>
+      <input type="submit" value="getJson">
+    </form>
+-->
   
 </body>
 </html>

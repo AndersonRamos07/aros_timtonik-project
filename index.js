@@ -23,8 +23,17 @@ app.get('/getAll', (req, res)=>{
   //var retornoSemUm = jsonInArray.pop();
   //var encontrarNoArray = jsonInArray.find(elem =>{elem === 1});
   console.log(typeof(encontrarNoArray) + '<encontrarNoArray>');
-  res.status(200).send(/*JSON.parse()jsonInArray*/jsonInArray[1].id);
+  res.status(200).send(jsonInArray);
 });
+
+//  http: POST - POR NOME
+app.post('/searchByName', (req, res)=>{
+  console.log(req.param.nomeSearch + '<nomeSearch>')
+  var jsonL = Function.saveContent();
+  var jsonInArray = JSON.parse(jsonL);
+  var retorno = jsonInArray.find(elem => elem.nome == req.body.nomeSearch)
+  res.send(retorno);
+})
 
 // http: POST - ADICIONAR
 app.post('/add', (req, res) => {
@@ -42,13 +51,6 @@ app.get('/getJson', (req, res)=>{
 app.listen(PORT, () => {
   console.log(`rodando na porta http://localhost:${PORT}`)
 });
-
-
-app.get('/all', (req, res)=>{
-  var jsonL = Function.getContent();
-  res.send(jsonL);
-})
-
 
 /*
 app.post('/foi', (req, res)=>{
