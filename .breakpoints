@@ -3,15 +3,15 @@
     "functions/functions.js": [
       {
         "id": "948a49db-c668-41ea-8157-ad4273907c74",
-        "line": 11,
-        "version": 1,
-        "index": 398
+        "line": 9,
+        "version": 100,
+        "index": 312
       },
       {
         "id": "4d5460af-3c66-4e1a-a204-fe06cc31184f",
-        "line": 46,
-        "version": 1,
-        "index": 1230
+        "line": 33,
+        "version": 100,
+        "index": 1068
       }
     ]
   }

@@ -1,6 +1,5 @@
 const modelo = require('../models/Modelo');
 const funcFiles = require('./fileFunctions');
-const getFunc = require('./getFunction');
 
 const cArquivo = './arquivo/_arosBD.json';
 
@@ -25,9 +24,18 @@ const saveContent = ()=>{
   return funcFiles.pegarConteudo(cArquivo);
 };
 
-const pegarOConteudo = () =>{
-  var content = funcFiles.pegarConteudo(cArquivo); 
-  var tudo = getFunc.convertArray(content);
+const pegarOConteudo = (pIndice, pModelo) =>{
+  var convertido = funcFiles.convertArray(cArquivo);
+  convertido.splice(pIndice, 1, pModelo);
+  var desConvertido = JSON.stringify(convertido);
+  funcFiles.aditarArquivo(desConvertido, cArquivo);
+  return convertido;
 }
 
 module.exports = { construir, saveContent, pegarOConteudo }
+
+  //var content = funcFiles.pegarConteudo(cArquivo);
+  //console.log(content + '<pegarOConteudo/tudo> and <typeOf>' + typeof(content)); 
+  //var tudo = funcFiles.convertArray(cArquivo);
+  //console.log(tudo);
+  //console.log(tudo + '<pegarOConteudo/tudo> and <typeOf>' + typeof(tudo));

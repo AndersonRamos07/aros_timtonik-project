@@ -21,16 +21,18 @@ const pegarConteudo = (pArquivo)=>{
   return retorno;
 };
 
-const convertArray = (pArquivo) =>{
-  var coor = pegarConteudo(pArquivo);
-  return JSON.parse(coor);
-}
-
 //  INSERE O CONTEUDO NO ARQUIVO
 const aditarArquivo = (pConteudo, pArquivo)=>{
   return fs.writeFile(pArquivo, pConteudo, (err)=>{
     if(err)throw err
     console.log('Arquivo gravado!')})
 };
+
+const convertArray = (pArquivo) =>{
+  var coor = pegarConteudo(pArquivo);
+  return JSON.parse(coor);
+}
+
+//const updateContent = ()
 
 module.exports = {convertArray, verificarArquivo, verificarConteudo, aditarArquivo, pegarConteudo}

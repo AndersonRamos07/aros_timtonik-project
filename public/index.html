@@ -48,15 +48,39 @@
   </form>
   </div>
 
-<!--
-    <form action='/all' method='get'>
-      <input type="submit" value="All">
-    </form>
+    <div class='rest' style='background-color:Gray'>
+  <form action="/red" method="post"><!--action="/red" method="get"-->
+    <fieldset><legend>UPDATE (PUT)</legend>
+      <label for='nome'>Nome:</label>
+        <input type='text' name='nome' />
+          <label for='sobreNome'>Sobrenome:</label>
+        <input type='text' name='sobreNome' />
+        <label for='cpf'>CPF:</label>
+        <input type='number' name='cpf' />
+        <fieldset name='endereco'>
+        <label for='rua'>Rua:</label>
+        <input type='text' name='rua' />
+        <label for='bairro'>Bairro:</label>
+        <input type='text' name='bairro' />
+        <label for='cidade'>Cidade:</label>
+        <input type='text' name='cidade' />
+        </fieldset>
+        <input type="number" name="num"/>
+      <button type="submit" onclick="alert('Não funciona ainda! - UPDATE')">RED</button>
+    </fieldset>
+  </form>
+  </div>
 
-    <form action='/getJson' method='get'>
-      <input type="submit" value="getJson">
-    </form>
--->
-  
+    <div class='rest' style='background-color:Gray'>
+  <form><!--action="/delContent" method="del"-->
+  <fieldset>
+    <legend>Deletar por Nome (DELETE)</legend>
+    <label for='nomeDel'>Nome:</label>
+    <input type='text' name='nomeDel'/>
+    <button type="submit" onclick="alert('Não funciona ainda! - DELETAR')">DELETAR</button>
+  </fieldset>
+  </form>
+  </div>
+
 </body>
 </html>

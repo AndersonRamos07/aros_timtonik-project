@@ -34,6 +34,17 @@ app.post('/add', (req, res) => {
   res.json(retorno);
 });
 
+app.post('/red', (req, res)=>{
+  var atualizado = {
+  "nome":req.body.nome,
+  "sobreNome": req.body.sobreNome,
+  "cpf":req.body.cpf,
+  "enderecos": {"rua":req.body.rua,"bairro":req.body.bairro,"cidade":req.body.cidade}};
+  //var ret = Function.pegarOConteudo(req.body.num, atualizado);
+  //res.status(200).send(ret);
+  console.log(JSON.stringify(atualizado) + '<atualizado>');
+})
+
 app.listen(PORT, () => {
   console.log(`rodando na porta http://localhost:${PORT}`)
 });
