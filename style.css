@@ -17,6 +17,11 @@ nav
 {
     display: flex;
     justify-content: space-between;
+    right: 0;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100vw;
 } input , label
 {
     margin: 10px;
@@ -86,4 +91,8 @@ span:not(.icon , #settings)
 } #second
 {
     width: 60vw;
+}
+section
+{
+    margin: 0 30px;
 }
