@@ -1,0 +1,13 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#board
+{
+    border: 2px solid black;
+    height: 600px;
+    width: 900px;
+}
