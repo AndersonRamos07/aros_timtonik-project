@@ -11,17 +11,29 @@
 
     <title>timtonik - breaktime</title>
     <script src="break.js" defer></script>
-    <link rel="StyleSheet" href="./style.css"/>
+    <script src="modal.js" defer></script>
+    <link rel="StyleSheet" href="./public/css/modal.css"/>
+    <link rel="StyleSheet" href="./public/css/style.css"/>
+    <link rel="StyleSheet" href="./public/css/convention.css"/>
 </head>
 <body>
-    <nav>
+    <nav id="menulateral">
         <span id="settings">&#9881</span>
-    </nav>
-        <div id="menulateral">
-            <a href="#">Choose the hour</a>
-            <a href="#">Choose the background</a>
-            <a href="/board.html">Board</a>
+        <div id="submenu">
+            <a href="#" class="settings all" id="all" title="Mude as Informacoes">SET ALL INFO</a>
+            <a href="#" class="settings hour" title="Altere a hora">SET THE HOUR</a>
+            <a href="#" class="settings info" title="Adicione uma informacao">SET THE INFORMATION</a>
+            <label title="Remover as images?">REMOVE IMAGES? <input id="imgs" type="checkbox"></label>
+            <a href="/board.html" title="Pagina do board">BOARD</a>
+            <div class="chess">
+                <a href="https://lichess.org/@/timtonic"
+                title="Pagina principal">&#9812</a>
+                <a href="https://lichess.org/@/timtonic"
+                target="_blank"
+                title="Pagina principal - Profile">&#9814</a>
+            </div>
         </div>
+    </nav>
     <main>
         <h1>
             <span>&#9749</span>
@@ -36,22 +48,59 @@
     </main>
     <footer>
         <div id="footer">
-            <section>
+            <section class="images" id="abc">
                 <img src="./imgs/avatar.svg" alt="avatar">        
             </section>
             <section>
                 <article>
                     <header>
                         <span class="icon">&#128172</span>
-                        <strong>INFORMATION</strong>
+                        <strong id="titleInfo"
+                            title="Title of information">
+                                INFORMATION
+                        </strong>
                     </header>
-                    <p>Some information or advice</p>
+                    <p id="textInfo"
+                        title="Any relevant information">
+                            Some information or advice
+                    </p>
                 </article>
             </section>
-            <section>
+            <section class="images" id="def">
                 <span>&#129496</span>
             </section>
         </div>
     </footer>
+    <div class="modal">
+        <form action="#" method="#">
+            <fieldset id="formHour">
+                <legend>Hour's Settings</legend>
+                <label title="Hour">
+                    Select hour:
+                    <input type="time" name="hour">
+                </label>
+                <label title="Hour">
+                    From now:
+                    <input type="checkbox" name="hour">
+                </label>
+                <button type="submit">Select</button>
+            </fieldset>
+            <fieldset id="formInfo">
+                <legend>Info's Settings</legend>
+                <label title="Information's title">
+                    Title:
+                    <input type="text" name="infoTitle">
+                </label>
+                <label title="Information's text">
+                    Information:
+                    <textarea
+                        id="infoText"
+                        name="infoText"
+                        rows="5" cols="40">
+                    </textarea>
+                </label>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
