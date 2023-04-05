@@ -1,3 +1,6 @@
+/*
+    ROOT
+*/
 :root
 {
     --board: #122D0A;
@@ -5,22 +8,19 @@
 }
 *
 {
-    /*
-    background-color: var(--board);
-    color: var(--fonts);
-    */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*
+    NAV
+*/
 nav
 {
     display: flex;
-    justify-content: space-between;
-    right: 0;
+    left: 0;
     top: 0;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 100vw;
 } input , label
 {
@@ -30,16 +30,27 @@ nav
 {
     cursor: pointer;
 }
-main , section
+#menulateral
+{
+    visibility: hidden;
+    margin-top: 25px;
+    position: absolute;
+}
+#menulateral > a
+{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+/*
+    MAIN
+*/
+main
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-} main
-{
-    height: 100vh;
-    width: 100vw;
 }
 h1 , h2 , h3 , article, header
 {
@@ -49,12 +60,10 @@ h1 , h2 , h3 , article, header
 h1
 {
     font-size: 100px;
-}
-h2
+}h2
 {
     font-size: 50px;
-}
-h3
+}h3
 {
     color: red;
 }
@@ -62,8 +71,7 @@ footer
 {
     right: 0;
     bottom: 0;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 100vw;
 
 } #footer
