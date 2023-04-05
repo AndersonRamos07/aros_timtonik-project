@@ -32,9 +32,9 @@ nav
 }
 #menulateral
 {
-    visibility: hidden;
     margin-top: 25px;
     position: absolute;
+    opacity: 0;
 }
 #menulateral > a
 {
