@@ -1,0 +1,35 @@
+/*#region Trecho 001 https://www.instagram.com/reel/CqpuAVtrBts/?igshid=ZTE2MDY0MWU%3D */
+#menulateral
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#submenu
+{
+    background-color: lightslategray;
+    border-radius: 0 25% 25% 0;
+    display: none;
+    position: absolute;
+    width: 20vw;
+    z-index: 1;
+}
+#submenu > a,
+#submenu > div ,
+div > a,
+label
+{
+    color: #fff;
+    display: block;
+    margin: 50px auto;
+    text-decoration: none;
+}
+#menulateral:hover #submenu
+{
+    display: block;
+}
+/*#endregion Trecho 001*/
+#submenu > a:hover , #submenu > div > a:hover , #chess > a:hover, label:hover
+{
+    font: 20px bolder Arial, Helvetica, sans-serif;
+}
